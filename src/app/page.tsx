@@ -132,7 +132,7 @@ export default function HomePage() {
       <header className="bg-white border-b border-gray-100 shadow-sm sticky top-0 z-10">
         <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <OcbcLogo variant="red" />
+            <OcbcLogo variant="inline" />
             <div className="w-px h-5 bg-gray-200" />
             <span className="text-gray-700 text-sm font-semibold tracking-wide">
               Smart Search
