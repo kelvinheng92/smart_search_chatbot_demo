@@ -2,7 +2,7 @@
 
 import { useState, useRef, useCallback } from "react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
+import OcbcLogo from "@/components/OcbcLogo";
 import type { Message, ChatState, ChatResponse } from "@/types";
 import PhoneMockup from "@/components/PhoneMockup";
 
@@ -132,7 +132,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
           {/* Logo + title */}
           <div className="flex items-center gap-3">
-            <Image src="/ocbc-logo.svg" alt="OCBC" width={100} height={26} priority />
+            <OcbcLogo variant="red" />
             <div className="w-px h-5 bg-gray-200" />
             <span className="text-gray-700 text-sm font-semibold tracking-wide">
               Smart Search
@@ -166,9 +166,6 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <div>
             <h1 className="text-lg font-bold tracking-wide">Credit Card Smart Search</h1>
-            <p className="text-red-100 text-xs mt-0.5">
-              Powered by TF-IDF intent matching · 26 intent categories
-            </p>
           </div>
           <div className="hidden sm:flex items-center gap-2 bg-white/10 rounded-full px-4 py-2">
             <div className="w-2 h-2 bg-green-300 rounded-full animate-pulse" />

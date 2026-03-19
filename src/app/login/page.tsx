@@ -2,7 +2,7 @@
 
 import { useState, FormEvent } from "react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
+import OcbcLogo from "@/components/OcbcLogo";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -37,7 +37,7 @@ export default function LoginPage() {
       {/* Left panel — OCBC red brand */}
       <div className="hidden lg:flex lg:w-1/2 bg-ocbc-red flex-col justify-between p-12">
         <div>
-          <Image src="/ocbc-logo-white.svg" alt="OCBC" width={120} height={32} priority />
+          <OcbcLogo variant="white" />
         </div>
         <div className="text-white space-y-4">
           <h2 className="text-4xl font-bold leading-tight">
@@ -55,7 +55,7 @@ export default function LoginPage() {
         <div className="w-full max-w-sm">
           {/* Mobile logo */}
           <div className="lg:hidden mb-8 flex justify-center">
-            <Image src="/ocbc-logo.svg" alt="OCBC" width={120} height={32} priority />
+            <OcbcLogo variant="red" />
           </div>
 
           <div className="mb-8">
