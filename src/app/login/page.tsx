@@ -41,10 +41,10 @@ export default function LoginPage() {
         </div>
         <div className="text-white space-y-4">
           <h2 className="text-4xl font-bold leading-tight">
-            Smart Search<br />Credit Card Assistant
+            Smart Search
           </h2>
           <p className="text-red-100 text-base leading-relaxed max-w-sm">
-            Find the right OCBC credit card for your lifestyle in seconds using AI-powered intent matching.
+            Help customers navigate the OCBC mobile app — instantly find the right feature or section.
           </p>
         </div>
         <p className="text-red-200 text-xs">© 2025 OCBC Bank. Internal demo only.</p>
@@ -60,7 +60,7 @@ export default function LoginPage() {
 
           <div className="mb-8">
             <h1 className="text-2xl font-bold text-gray-900">Sign in</h1>
-            <p className="text-sm text-gray-500 mt-1">Access the Smart Search demo</p>
+            <p className="text-sm text-gray-500 mt-1">Sign in to access Smart Search</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-5">

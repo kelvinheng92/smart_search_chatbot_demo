@@ -900,7 +900,7 @@ export const OUT_OF_SCOPE_INTENT: OutOfScopeIntent = {
   id: "out_of_scope",
   name: "Out of Scope",
   templateResponse: {
-    text: "I'm OCBC's Smart Search assistant for credit cards. I can help you find the right card for your needs. What are you looking for?",
-    buttons: ["Best Credit Cards", "Cashback Cards", "Miles Cards", "No Annual Fee Cards"],
+    text: "I'm not sure what you're looking for. I can help you navigate the OCBC app — try asking about transfers, cards, payments, or account features.",
+    buttons: ["Apply for a card", "Transfer money", "Pay bills", "Card rewards"],
   },
 };

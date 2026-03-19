@@ -7,33 +7,34 @@ import type { Message, ChatState, ChatResponse } from "@/types";
 import PhoneMockup from "@/components/PhoneMockup";
 
 const TOPIC_CHIPS = {
-  Spending: [
-    "Best Card for Me",
-    "Dining Cards",
-    "Grocery Cards",
-    "Transport Cards",
-    "Online Shopping",
-    "Travel Miles",
+  Cards: [
+    "Apply for a card",
+    "View my cards",
+    "Card rewards",
+    "Block my card",
+    "Supplementary card",
   ],
-  Features: [
-    "Cashback Cards",
-    "No Annual Fee",
-    "Sign-up Promos",
-    "Rewards Programme",
+  Payments: [
+    "Pay bills",
+    "Transfer money",
+    "PayNow",
+    "Card fees",
+    "Instalment plan",
   ],
-  Info: [
-    "Fees & Charges",
-    "Eligibility",
-    "Supplementary Cards",
-    "Card Security",
+  Help: [
+    "Card eligibility",
+    "Cashback cards",
+    "Miles cards",
+    "No annual fee",
+    "Card promotions",
   ],
 };
 
 const WELCOME_MESSAGE: Message = {
   role: "assistant",
   content:
-    "Welcome to OCBC Smart Search! I can help you find the perfect credit card. What are you looking for today?",
-  buttons: ["Best Card for Me", "Cashback Cards", "Miles Cards", "No Annual Fee Cards"],
+    "Hi! I'm OCBC Smart Search. Tell me what you're looking for and I'll guide you to the right place in the OCBC app.",
+  buttons: ["Apply for a card", "Pay bills", "Transfer money", "Card rewards"],
   timestamp: Date.now(),
 };
 
@@ -130,7 +131,6 @@ export default function HomePage() {
       {/* Header */}
       <header className="bg-white border-b border-gray-100 shadow-sm sticky top-0 z-10">
         <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
-          {/* Logo + title */}
           <div className="flex items-center gap-3">
             <OcbcLogo variant="red" />
             <div className="w-px h-5 bg-gray-200" />
@@ -139,7 +139,6 @@ export default function HomePage() {
             </span>
           </div>
 
-          {/* Right controls */}
           <div className="flex items-center gap-2">
             <button
               onClick={handleReset}
@@ -165,7 +164,8 @@ export default function HomePage() {
       <div className="bg-ocbc-red text-white py-5 px-4">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <div>
-            <h1 className="text-lg font-bold tracking-wide">Credit Card Smart Search</h1>
+            <h1 className="text-lg font-bold tracking-wide">OCBC Smart Search</h1>
+            <p className="text-red-100 text-xs mt-0.5">Navigate the OCBC app with ease</p>
           </div>
           <div className="hidden sm:flex items-center gap-2 bg-white/10 rounded-full px-4 py-2">
             <div className="w-2 h-2 bg-green-300 rounded-full animate-pulse" />
@@ -216,7 +216,7 @@ export default function HomePage() {
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="Ask about OCBC credit cards…"
+            placeholder="What are you looking for in the OCBC app?"
             disabled={chatState.isLoading}
             className="flex-1 px-4 py-2.5 rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-ocbc-red focus:border-transparent text-sm bg-white disabled:opacity-60 shadow-sm"
           />

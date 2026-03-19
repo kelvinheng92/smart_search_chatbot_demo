@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "OCBC Smart Search",
-  description: "OCBC Credit Card Smart Search — TF-IDF Intent Matching Demo",
+  description: "OCBC Smart Search — Navigate the OCBC mobile app with ease",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
