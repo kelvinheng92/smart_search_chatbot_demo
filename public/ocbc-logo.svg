@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 48" fill="none">
+  <!-- OCBC Icon: two overlapping lens/eye shapes -->
+  <g>
+    <!-- Left lens -->
+    <path d="M18 10 C10 10 4 18 4 24 C4 30 10 38 18 38 C22 38 26 35.5 28.5 31.5 C26 27.5 24.5 22.5 24.5 24 C24.5 19 21.5 14 18 10Z" fill="#E2231A" opacity="0.85"/>
+    <!-- Right lens -->
+    <path d="M18 10 C21.5 14 24.5 19 24.5 24 C24.5 29 21.5 34 18 38 C22 38 26 36 28.5 31.5 C31 27 31 21 28.5 16.5 C26 12 22 10 18 10Z" fill="#E2231A"/>
+  </g>
+  <!-- OCBC wordmark -->
+  <text x="40" y="33" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="24" fill="#E2231A" letter-spacing="1">OCBC</text>
+</svg>
