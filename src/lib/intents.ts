@@ -21,10 +21,6 @@ export interface OutOfScopeIntent {
   };
 }
 
-const APPLY_CARDS_BUTTON: Button = {
-  label: "Apply Cards",
-  url: "https://www.ocbc.com/personal-banking/cards",
-};
 
 export const CREDIT_CARD_INTENTS: Intent[] = [
   {
@@ -57,7 +53,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
     ],
     templateResponse: {
       text: "Here are OCBC credit cards that work well for everyday spend (cashback, miles and rewards). Tap **Apply Cards** below to compare and start.",
-      buttons: [APPLY_CARDS_BUTTON],
+      buttons: [{ label: "View All Credit Cards", url: "https://www.ocbc.com/personal-banking/cards/credit-card" }],
     },
   },
   {
@@ -91,7 +87,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
     ],
     templateResponse: {
       text: "If you dine out often, consider cards that reward restaurants, cafes and bars. Tap **Apply Cards** below to see eligible cards and current benefits.",
-      buttons: [APPLY_CARDS_BUTTON],
+      buttons: [{ label: "View Dining Cards", url: "https://www.ocbc.com/personal-banking/cards/365-cashback-credit-card" }],
     },
   },
   {
@@ -123,7 +119,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
     ],
     templateResponse: {
       text: "For supermarket and grocery runs (online/offline), look for cards with grocery/category cashback. Use the link below to compare and apply.",
-      buttons: [APPLY_CARDS_BUTTON],
+      buttons: [{ label: "View Grocery Cards", url: "https://www.ocbc.com/personal-banking/cards/365-cashback-credit-card" }],
     },
   },
   {
@@ -158,7 +154,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
     ],
     templateResponse: {
       text: "Drivers and commuters can save on petrol, ride\u2011hailing and public transport with selected cards. Use the link to view options and apply.",
-      buttons: [APPLY_CARDS_BUTTON],
+      buttons: [{ label: "View Transport Cards", url: "https://www.ocbc.com/personal-banking/cards/credit-card" }],
     },
   },
   {
@@ -191,7 +187,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
     ],
     templateResponse: {
       text: "If most of your spend is online (e\u2011commerce, marketplaces), browse OCBC cards that boost online transactions and then apply from the catalog.",
-      buttons: [APPLY_CARDS_BUTTON],
+      buttons: [{ label: "View Online Shopping Cards", url: "https://www.ocbc.com/personal-banking/cards/titanium-rewards-credit-card" }],
     },
   },
   {
@@ -225,7 +221,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
     ],
     templateResponse: {
       text: "Prefer earning miles? Browse OCBC air\u2011miles cards, check transfer partners and fees, then apply using the button below.",
-      buttons: [APPLY_CARDS_BUTTON],
+      buttons: [{ label: "View Miles Cards", url: "https://www.ocbc.com/personal-banking/cards/90-degrees-travel-credit-card" }],
     },
   },
   {
@@ -259,7 +255,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
     ],
     templateResponse: {
       text: "If you want predictable bill savings, review OCBC cashback cards (caps and minimum spends apply). Tap through to compare and apply.",
-      buttons: [APPLY_CARDS_BUTTON],
+      buttons: [{ label: "View Cashback Cards", url: "https://www.ocbc.com/personal-banking/cards/infinity-unlimited-cashback-card.page" }],
     },
   },
   {
@@ -291,7 +287,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
     ],
     templateResponse: {
       text: "You can review cards with low fees or waiver policies (subject to eligibility). Continue to the catalog to compare and apply.",
-      buttons: [APPLY_CARDS_BUTTON],
+      buttons: [{ label: "Compare Cards", url: "https://www.ocbc.com/personal-banking/cards/card-comparison.page" }],
     },
   },
   {
@@ -326,7 +322,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
     ],
     templateResponse: {
       text: "New to credit cards? Check age/income criteria first. If eligible, use the catalog to apply for an entry\u2011level card.",
-      buttons: [APPLY_CARDS_BUTTON],
+      buttons: [{ label: "Apply for a Card", url: "https://www.ocbc.com/personal-banking/campaign/newcardpromo" }],
     },
   },
   {
@@ -359,7 +355,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
     ],
     templateResponse: {
       text: "Families often benefit from grocery and utilities categories. Explore card options and apply via the catalog below.",
-      buttons: [APPLY_CARDS_BUTTON],
+      buttons: [{ label: "View Family Cards", url: "https://www.ocbc.com/personal-banking/cards/365-cashback-credit-card" }],
     },
   },
   {
@@ -393,7 +389,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
     ],
     templateResponse: {
       text: "Streaming and subscriptions can be rewarded on select cards (MCCs and caps apply). Compare and apply via the link below.",
-      buttons: [APPLY_CARDS_BUTTON],
+      buttons: [{ label: "View Rewards Cards", url: "https://www.ocbc.com/personal-banking/cards/rewards-card" }],
     },
   },
   {
@@ -426,7 +422,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
     ],
     templateResponse: {
       text: "Medical and insurance spends may have exclusions. Review card terms and eligible categories, then proceed to apply if suitable.",
-      buttons: [APPLY_CARDS_BUTTON],
+      buttons: [{ label: "View All Credit Cards", url: "https://www.ocbc.com/personal-banking/cards/credit-card" }],
     },
   },
   {
@@ -460,7 +456,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
     ],
     templateResponse: {
       text: "If you spend in foreign currency, compare cards that reward overseas transactions and note FX fees. Use the link to view and apply.",
-      buttons: [APPLY_CARDS_BUTTON],
+      buttons: [{ label: "View Travel Cards", url: "https://www.ocbc.com/personal-banking/cards/90-degrees-travel-credit-card" }],
     },
   },
   {
@@ -492,7 +488,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
     ],
     templateResponse: {
       text: "Most OCBC cards support contactless and mobile wallets. Check eligibility and any channel\u2011specific terms, then apply below.",
-      buttons: [APPLY_CARDS_BUTTON],
+      buttons: [{ label: "View All Credit Cards", url: "https://www.ocbc.com/personal-banking/cards/credit-card" }],
     },
   },
   {
@@ -525,7 +521,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
     ],
     templateResponse: {
       text: "You can request supplementary cards after the primary card is approved. Start with the main card application from the catalog below.",
-      buttons: [APPLY_CARDS_BUTTON],
+      buttons: [{ label: "Supplementary Card Info", url: "https://www.ocbc.com/personal-banking/help-and-support/cards/general" }],
     },
   },
   {
@@ -560,7 +556,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
     ],
     templateResponse: {
       text: "Welcome offers change periodically and have spend conditions. View current promos in the catalog and apply from there.",
-      buttons: [APPLY_CARDS_BUTTON],
+      buttons: [{ label: "View Card Promotions", url: "https://www.ocbc.com/personal-banking/cards/card-promotions" }],
     },
   },
   {
@@ -595,7 +591,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
     ],
     templateResponse: {
       text: "Age, income and residency criteria apply (per MAS/OCBC). Review requirements in the catalog and proceed to apply if eligible.",
-      buttons: [APPLY_CARDS_BUTTON],
+      buttons: [{ label: "Apply for a Card", url: "https://www.ocbc.com/personal-banking/cards/credit-card" }],
     },
   },
   {
@@ -629,7 +625,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
     ],
     templateResponse: {
       text: "Annual fees, late charges, interest and FX fees apply. Review the fee schedule in the catalog before you apply.",
-      buttons: [APPLY_CARDS_BUTTON],
+      buttons: [{ label: "View Fees & Charges", url: "https://www.ocbc.com/assets/pdf/fees_charges.pdf" }],
     },
   },
   {
@@ -664,7 +660,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
     ],
     templateResponse: {
       text: "OCBC cards earn cashback, miles or points depending on product and category. Compare how rewards are earned and credited, then apply.",
-      buttons: [APPLY_CARDS_BUTTON],
+      buttons: [{ label: "View Rewards Card", url: "https://www.ocbc.com/personal-banking/cards/rewards-card" }],
     },
   },
   {
@@ -699,7 +695,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
     ],
     templateResponse: {
       text: "Some bill types (e.g., government, insurance, wallet top\u2011ups) may be excluded from rewards. Check exclusions, then apply if the card still fits.",
-      buttons: [APPLY_CARDS_BUTTON],
+      buttons: [{ label: "Card Help & Support", url: "https://www.ocbc.com/personal-banking/help-and-support/cards/general" }],
     },
   },
   {
@@ -732,7 +728,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
     ],
     templateResponse: {
       text: "For premium retail spends, compare cards that fit large purchases (note monthly caps). Apply from the catalog below.",
-      buttons: [APPLY_CARDS_BUTTON],
+      buttons: [{ label: "View VOYAGE Card", url: "https://www.ocbc.com/personal-banking/cards/voyage-credit-card-rewards.page" }],
     },
   },
   {
@@ -765,7 +761,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
     ],
     templateResponse: {
       text: "Some merchants offer 0% IPP; rewards and fees may differ on installments. Review details in T&Cs and apply if it suits your needs.",
-      buttons: [APPLY_CARDS_BUTTON],
+      buttons: [{ label: "View Instalment Plans", url: "https://www.ocbc.com/personal-banking/cards/card-services/interest-free-instalment-plans" }],
     },
   },
   {
@@ -798,7 +794,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
     ],
     templateResponse: {
       text: "Designs vary by product/tier. Choose based on benefits first; then apply via the catalog.",
-      buttons: [APPLY_CARDS_BUTTON],
+      buttons: [{ label: "View All Cards", url: "https://www.ocbc.com/personal-banking/cards/credit-card" }],
     },
   },
   {
@@ -832,7 +828,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
     ],
     templateResponse: {
       text: "Once you have a card, you can lock/unlock and set controls in\u2011app. To get started, apply for a card via the catalog below.",
-      buttons: [APPLY_CARDS_BUTTON],
+      buttons: [{ label: "Card Services & Controls", url: "https://www.ocbc.com/personal-banking/help-and-support/cards/card-services" }],
     },
   },
   {
@@ -865,7 +861,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
     ],
     templateResponse: {
       text: "If you value eco\u2011friendly spending, check eligible categories and exclusions first. Compare cards and apply below.",
-      buttons: [APPLY_CARDS_BUTTON],
+      buttons: [{ label: "View All Credit Cards", url: "https://www.ocbc.com/personal-banking/cards/credit-card" }],
     },
   },
   {
@@ -898,7 +894,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
     ],
     templateResponse: {
       text: "Already have an OCBC card? Consider a complementary card to cover other categories. Compare options in the catalog and apply.",
-      buttons: [APPLY_CARDS_BUTTON],
+      buttons: [{ label: "Compare Cards", url: "https://www.ocbc.com/personal-banking/cards/card-comparison.page" }],
     },
   },
 ];
