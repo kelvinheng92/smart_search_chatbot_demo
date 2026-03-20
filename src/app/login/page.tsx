@@ -36,9 +36,6 @@ export default function LoginPage() {
     <div className="min-h-screen flex">
       {/* Left panel — OCBC red brand */}
       <div className="hidden lg:flex lg:w-1/2 bg-ocbc-red flex-col justify-between p-12">
-        <div>
-          <OcbcLogo variant="stacked" className="brightness-0 invert" />
-        </div>
         <div className="text-white space-y-4">
           <h2 className="text-4xl font-bold leading-tight">
             Smart Search

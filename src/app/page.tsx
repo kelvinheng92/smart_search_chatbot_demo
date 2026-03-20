@@ -2,39 +2,56 @@
 
 import { useState, useRef, useCallback } from "react";
 import { useRouter } from "next/navigation";
-import OcbcLogo from "@/components/OcbcLogo";
 import type { Message, ChatState, ChatResponse } from "@/types";
 import PhoneMockup from "@/components/PhoneMockup";
 
 const TOPIC_CHIPS = {
-  Cards: [
-    "Apply for a card",
-    "View my cards",
-    "Card rewards",
-    "Block my card",
-    "Supplementary card",
+  "Find a Card": [
+    "Best overall credit card",
+    "Cashback credit card",
+    "Travel miles credit card",
+    "No annual fee credit card",
+    "Student first credit card",
+    "Family credit card",
+    "Existing card optimization",
+    "Sustainability ESG card",
   ],
-  Payments: [
-    "Pay bills",
-    "Transfer money",
-    "PayNow",
-    "Card fees",
-    "Instalment plan",
+  "Spend Category": [
+    "Dining & restaurant card",
+    "Groceries & supermarket card",
+    "Transport & petrol card",
+    "Online shopping card",
+    "Overseas & FX spend card",
+    "Entertainment & subscriptions card",
+    "Healthcare & insurance card",
+    "Luxury & department store card",
   ],
-  Help: [
-    "Card eligibility",
-    "Cashback cards",
-    "Miles cards",
-    "No annual fee",
-    "Card promotions",
+  "Card Features": [
+    "Contactless & mobile wallet",
+    "Supplementary card for family",
+    "Card design & metal card",
+    "Card security & controls",
+    "Installment plan 0% IPP",
+  ],
+  "Card Info": [
+    "Sign-up promotions & welcome gifts",
+    "Eligibility & application requirements",
+    "Card fees & charges",
+    "Rewards points miles cashback",
+    "Bill payments & exclusions",
   ],
 };
 
 const WELCOME_MESSAGE: Message = {
   role: "assistant",
   content:
-    "Hi! I'm OCBC Smart Search. Tell me what you're looking for and I'll guide you to the right place in the OCBC app.",
-  buttons: ["Apply for a card", "Pay bills", "Transfer money", "Card rewards"],
+    "Hi! I'm OCBC Smart Search. Ask me anything about OCBC credit cards and I'll help you find the right one.",
+  buttons: [
+    { label: "Best card for everyday use" },
+    { label: "Cashback cards" },
+    { label: "Travel miles cards" },
+    { label: "No annual fee cards" },
+  ],
   timestamp: Date.now(),
 };
 
@@ -131,12 +148,9 @@ export default function HomePage() {
       {/* Header */}
       <header className="bg-white border-b border-gray-100 shadow-sm sticky top-0 z-10">
         <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <OcbcLogo variant="inline" />
-            <div className="w-px h-5 bg-gray-200" />
-            <span className="text-gray-700 text-sm font-semibold tracking-wide">
-              Smart Search
-            </span>
+          <div className="flex items-center">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/ocbc.png" alt="OCBC" style={{ height: 32, width: "auto" }} />
           </div>
 
           <div className="flex items-center gap-2">

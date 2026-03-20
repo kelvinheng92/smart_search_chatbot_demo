@@ -72,7 +72,6 @@ const intentVectors: number[][] = intentDocs.map((_, i) =>
   )
 );
 
-const CONFIDENT_THRESHOLD = 0.12;
 const WEAK_THRESHOLD = 0.04;
 
 export function classifyIntent(message: string): {
@@ -114,16 +113,6 @@ export function getTFIDFResponse(message: string): ChatResponse {
   }
 
   const bestIntent = CREDIT_CARD_INTENTS[bestIndex];
-
-  if (bestScore < CONFIDENT_THRESHOLD) {
-    return {
-      text: `I think you're looking for **${bestIntent.name}**. Here's what I can help you with:`,
-      intent: bestIntent.name,
-      confidence: Math.round(bestScore * 100),
-      buttons: bestIntent.templateResponse.buttons,
-      outOfScope: false,
-    };
-  }
 
   return {
     text: bestIntent.templateResponse.text,

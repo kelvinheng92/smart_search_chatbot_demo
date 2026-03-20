@@ -1,6 +1,6 @@
 "use client";
 
-import type { Message } from "@/types";
+import type { Message, Button } from "@/types";
 
 interface ChatBubbleProps {
   message: Message;
@@ -70,15 +70,27 @@ export default function ChatBubble({ message, onButtonClick }: ChatBubbleProps) 
         </div>
         {message.buttons && message.buttons.length > 0 && (
           <div className="mt-2 flex flex-wrap gap-2">
-            {message.buttons.map((btn, i) => (
-              <button
-                key={i}
-                onClick={() => onButtonClick(btn)}
-                className="text-xs px-3 py-1.5 rounded-full border border-ocbc-red text-ocbc-red hover:bg-red-50 transition-colors font-medium whitespace-nowrap"
-              >
-                {btn}
-              </button>
-            ))}
+            {message.buttons.map((btn: Button, i: number) =>
+              btn.url ? (
+                <a
+                  key={i}
+                  href={btn.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-3 py-1.5 rounded-full border border-ocbc-red text-ocbc-red hover:bg-red-50 transition-colors font-medium whitespace-nowrap"
+                >
+                  {btn.label}
+                </a>
+              ) : (
+                <button
+                  key={i}
+                  onClick={() => onButtonClick(btn.label)}
+                  className="text-xs px-3 py-1.5 rounded-full border border-ocbc-red text-ocbc-red hover:bg-red-50 transition-colors font-medium whitespace-nowrap"
+                >
+                  {btn.label}
+                </button>
+              )
+            )}
           </div>
         )}
       </div>
