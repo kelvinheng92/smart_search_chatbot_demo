@@ -422,7 +422,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
     ],
     templateResponse: {
       text: "Medical and insurance spends may have exclusions. Review card terms and eligible categories, then proceed to apply if suitable.",
-      buttons: [{ label: "View All Credit Cards", url: "https://www.ocbc.com/personal-banking/cards/credit-card" }],
+      buttons: [{ label: "Great Eastern Cashflo Card", url: "https://www.ocbc.com/personal-banking/cards/great-eastern-cashflo-credit-card.page" }],
     },
   },
   {
@@ -488,7 +488,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
     ],
     templateResponse: {
       text: "Most OCBC cards support contactless and mobile wallets. Check eligibility and any channel\u2011specific terms, then apply below.",
-      buttons: [{ label: "View All Credit Cards", url: "https://www.ocbc.com/personal-banking/cards/credit-card" }],
+      buttons: [{ label: "Add Card to Mobile Wallet", url: "https://www.ocbc.com/personal-banking/help-and-support/cards/adding-card-to-mobile-wallet" }],
     },
   },
   {
@@ -728,7 +728,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
     ],
     templateResponse: {
       text: "For premium retail spends, compare cards that fit large purchases (note monthly caps). Apply from the catalog below.",
-      buttons: [{ label: "View VOYAGE Card", url: "https://www.ocbc.com/personal-banking/cards/voyage-credit-card-rewards.page" }],
+      buttons: [{ label: "View VOYAGE Card", url: "https://www.ocbc.com/personal-banking/cards/voyage-credit-card.page" }],
     },
   },
   {
@@ -794,7 +794,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
     ],
     templateResponse: {
       text: "Designs vary by product/tier. Choose based on benefits first; then apply via the catalog.",
-      buttons: [{ label: "View All Cards", url: "https://www.ocbc.com/personal-banking/cards/credit-card" }],
+      buttons: [{ label: "View FRANK Card Designs", url: "https://www.ocbc.com/personal-banking/cards/ocbc-frank-credit-card" }],
     },
   },
   {
@@ -861,7 +861,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
     ],
     templateResponse: {
       text: "If you value eco\u2011friendly spending, check eligible categories and exclusions first. Compare cards and apply below.",
-      buttons: [{ label: "View All Credit Cards", url: "https://www.ocbc.com/personal-banking/cards/credit-card" }],
+      buttons: [{ label: "OCBC Sustainability Hub", url: "https://www.ocbc.com/personal-banking/sustainability.page" }],
     },
   },
   {
