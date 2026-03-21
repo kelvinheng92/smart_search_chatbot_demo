@@ -68,31 +68,47 @@ export default function ChatBubble({ message, onButtonClick }: ChatBubbleProps) 
             {renderMarkdown(message.content)}
           </p>
         </div>
-        {message.buttons && message.buttons.length > 0 && (
-          <div className="mt-2 flex flex-wrap gap-2">
-            {message.buttons.map((btn: Button, i: number) =>
-              btn.url ? (
-                <a
-                  key={i}
-                  href={btn.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs px-3 py-1.5 rounded-full border border-ocbc-red text-ocbc-red hover:bg-red-50 transition-colors font-medium whitespace-nowrap"
-                >
-                  {btn.label}
-                </a>
-              ) : (
-                <button
-                  key={i}
-                  onClick={() => onButtonClick(btn.label)}
-                  className="text-xs px-3 py-1.5 rounded-full border border-ocbc-red text-ocbc-red hover:bg-red-50 transition-colors font-medium whitespace-nowrap"
-                >
-                  {btn.label}
-                </button>
-              )
-            )}
-          </div>
-        )}
+        {message.buttons && message.buttons.length > 0 && (() => {
+          const urlButtons = message.buttons.filter((b: Button) => b.url);
+          const chipButtons = message.buttons.filter((b: Button) => !b.url);
+          return (
+            <>
+              {urlButtons.length > 0 && (
+                <div className="mt-3">
+                  <p className="text-[10px] text-gray-400 font-semibold uppercase tracking-widest mb-1.5">
+                    Click to find out more
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {urlButtons.map((btn: Button, i: number) => (
+                      <a
+                        key={i}
+                        href={btn.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs px-3 py-1.5 rounded-full border border-ocbc-red text-ocbc-red hover:bg-red-50 transition-colors font-medium whitespace-nowrap"
+                      >
+                        {btn.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+              {chipButtons.length > 0 && (
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {chipButtons.map((btn: Button, i: number) => (
+                    <button
+                      key={i}
+                      onClick={() => onButtonClick(btn.label)}
+                      className="text-xs px-3 py-1.5 rounded-full border border-ocbc-red text-ocbc-red hover:bg-red-50 transition-colors font-medium whitespace-nowrap"
+                    >
+                      {btn.label}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </>
+          );
+        })()}
         {message.additionalIntents && message.additionalIntents.length > 0 && (
           <div className="mt-3">
             <p className="text-[10px] text-gray-400 font-semibold uppercase tracking-widest mb-1.5">
