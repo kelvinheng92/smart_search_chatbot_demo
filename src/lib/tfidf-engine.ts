@@ -108,7 +108,6 @@ export function getTFIDFResponse(message: string): ChatResponse {
       buttons: OUT_OF_SCOPE_INTENT.templateResponse.buttons,
       intent: OUT_OF_SCOPE_INTENT.name,
       outOfScope: true,
-      confidence: Math.round(bestScore * 100),
     };
   }
 
@@ -117,7 +116,6 @@ export function getTFIDFResponse(message: string): ChatResponse {
   return {
     text: bestIntent.templateResponse.text,
     intent: bestIntent.name,
-    confidence: Math.round(bestScore * 100),
     buttons: bestIntent.templateResponse.buttons,
   };
 }

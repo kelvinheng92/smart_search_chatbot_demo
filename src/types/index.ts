@@ -7,8 +7,9 @@ export interface Message {
   role: "user" | "assistant";
   content: string;
   buttons?: Button[];
+  additionalIntents?: string[]; // extra matched intent names shown as suggestions
   intent?: string;
-  confidence?: number;
+  product?: string;
   outOfScope?: boolean;
   timestamp: number;
 }
@@ -25,8 +26,9 @@ export interface ChatRequest {
 export interface ChatResponse {
   text: string;
   intent?: string;
-  confidence?: number;
+  product?: string;
   buttons?: Button[];
+  additionalIntents?: string[];
   outOfScope?: boolean;
   latency?: number;
 }

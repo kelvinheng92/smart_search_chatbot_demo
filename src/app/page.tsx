@@ -96,8 +96,9 @@ export default function HomePage() {
           role: "assistant",
           content: data.text,
           buttons: data.buttons,
+          additionalIntents: data.additionalIntents,
           intent: data.intent,
-          confidence: data.confidence,
+          product: data.product,
           outOfScope: data.outOfScope,
           timestamp: Date.now(),
         };

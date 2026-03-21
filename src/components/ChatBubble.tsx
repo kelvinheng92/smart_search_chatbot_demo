@@ -93,6 +93,24 @@ export default function ChatBubble({ message, onButtonClick }: ChatBubbleProps) 
             )}
           </div>
         )}
+        {message.additionalIntents && message.additionalIntents.length > 0 && (
+          <div className="mt-3">
+            <p className="text-[10px] text-gray-400 font-semibold uppercase tracking-widest mb-1.5">
+              Also relevant
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {message.additionalIntents.map((intent: string, i: number) => (
+                <button
+                  key={i}
+                  onClick={() => onButtonClick(intent)}
+                  className="text-xs px-3 py-1.5 rounded-full border border-gray-300 text-gray-600 hover:border-ocbc-red hover:text-ocbc-red transition-colors font-medium whitespace-nowrap"
+                >
+                  {intent}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
