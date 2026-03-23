@@ -11,7 +11,7 @@ const TOPIC_CHIPS = {
     "Cashback credit card",
     "Travel miles credit card",
     "No annual fee credit card",
-    "Student & first credit card",
+    "Student first credit card",
     "Family credit card",
     "Existing card optimization",
     "Sustainability & ESG card perks",
@@ -37,7 +37,7 @@ const TOPIC_CHIPS = {
     "Sign-up promotions & welcome gifts",
     "Eligibility & application requirements",
     "Card fees & charges",
-    "How do rewards points & miles work",
+    "Rewards points miles cashback",
     "Bill payments & exclusions",
   ],
 };
