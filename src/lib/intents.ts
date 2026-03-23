@@ -292,7 +292,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
   },
   {
     id: "students_first_card",
-    name: "Students & First Card",
+    name: "Students & first card (entry-level)",
     description:
       "Explore cards suitable for students/first-time cardholders subject to age and income eligibility.",
     keywords: [
@@ -327,7 +327,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
   },
   {
     id: "family_kids",
-    name: "Family & Kids",
+    name: "Family & kids (groceries, utilities, education)",
     description:
       "Recommend cards aligned to family expenses: supermarkets, utilities, children-related spend.",
     keywords: [
@@ -630,7 +630,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
   },
   {
     id: "rewards_currency",
-    name: "Rewards: Points, Miles & Cashback",
+    name: "Rewards currency (points/miles/cashback)",
     description:
       "Explain how OCBC rewards work (e.g., points vs miles vs cashback) and redemption basics.",
     keywords: [
@@ -766,7 +766,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
   },
   {
     id: "card_design",
-    name: "Card Design & Metal Card",
+    name: "Card design & metal/plastic",
     description:
       "Preferences around card material/design and associated fees or tiers.",
     keywords: [
@@ -833,7 +833,7 @@ export const CREDIT_CARD_INTENTS: Intent[] = [
   },
   {
     id: "sustainability_esg",
-    name: "Sustainability & ESG",
+    name: "Sustainability & ESG perks",
     description:
       "Discovery for environmentally conscious users (e.g., eco merchants, donations).",
     keywords: [
