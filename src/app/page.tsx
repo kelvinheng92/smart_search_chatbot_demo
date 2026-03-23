@@ -11,10 +11,10 @@ const TOPIC_CHIPS = {
     "Cashback credit card",
     "Travel miles credit card",
     "No annual fee credit card",
-    "Student first credit card",
+    "Student & first credit card",
     "Family credit card",
     "Existing card optimization",
-    "Sustainability ESG card",
+    "Sustainability & ESG card perks",
   ],
   "Spend Category": [
     "Dining & restaurant card",
@@ -29,7 +29,7 @@ const TOPIC_CHIPS = {
   "Card Features": [
     "Contactless & mobile wallet",
     "Supplementary card for family",
-    "Card design & metal card",
+    "Card design & metal/plastic",
     "Card security & controls",
     "Installment plan 0% IPP",
   ],
@@ -37,7 +37,7 @@ const TOPIC_CHIPS = {
     "Sign-up promotions & welcome gifts",
     "Eligibility & application requirements",
     "Card fees & charges",
-    "Rewards points miles cashback",
+    "How do rewards points & miles work",
     "Bill payments & exclusions",
   ],
 };
